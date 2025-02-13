@@ -14,10 +14,34 @@
             //Ext: Display the number of iterations needed until 6174 is reached
 
             Console.WriteLine("Hello, Type a four digit number:"); //starter code for students
-            int x = Convert.ToInt32(Console.ReadLine()); //starter for students
+            int x = Convert.ToInt32(Console.ReadLine()); //starter for studentsbnn
             //YOUR CODE GOES HERE....=
+  
+                bool anysorts = true;
+                int[] myarr = {x};
 
-
+                while (anysorts)
+                {
+                    anysorts = false;
+                    for (int i = 0; i < myarr.Length - 1; i++)
+                    {
+                        if (myarr[i] > myarr[i + 1])
+                        {
+                            int temp = myarr[i];
+                            myarr[i] = myarr[i + 1];
+                            myarr[i + 1] = temp;
+                            anysorts = true;
+                        }
+                    }
+                }
+                for (int i = 0; i < myarr.Length; i++)
+                {
+                    Console.WriteLine(myarr[i]);
+                }
+            }
         }
     }
-}
+
+
+
+    
